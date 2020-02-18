@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using Opibus.Domain.Entities;
 
 namespace Opibus.Domain.Tests
 {
@@ -14,7 +15,8 @@ namespace Opibus.Domain.Tests
         {
             var cliente = "123.456.789-00";
             var valor = 10.00;
-            Assert.Pass();
+            var conta = new Conta(cliente, valor);
+            Assert.AreEqual(conta.Saldo, 10.00);
         }
     }
 }
