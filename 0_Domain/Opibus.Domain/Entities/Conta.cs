@@ -1,11 +1,20 @@
-﻿namespace Opibus.Domain.Entities
+﻿using System;
+
+namespace Opibus.Domain.Entities
 {
     public class Conta
     {
-
+        private Cliente cliente { get; private set; }
+        [Obsolete]
         public Conta(string cliente, double valor)
         {
             Cliente = cliente;
+            Valor = valor;
+        }
+
+        public Conta(Cliente cliente, double valor)
+        {
+            this.cliente = cliente;
             Valor = valor;
         }
 
