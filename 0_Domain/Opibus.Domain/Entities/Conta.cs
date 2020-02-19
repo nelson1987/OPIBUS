@@ -18,5 +18,16 @@ namespace Opibus.Domain.Entities
         {
             Valor += deposito.Valor;
         }
+
+        public void Sacar(double valorSaque)
+        {
+            Valor -= valorSaque;
+        }
+
+        public void Transferir(double valor, Conta conta)
+        {
+            Sacar(valor);
+            conta.Depositar(new Deposito(valor, this));
+        }
     }
 }

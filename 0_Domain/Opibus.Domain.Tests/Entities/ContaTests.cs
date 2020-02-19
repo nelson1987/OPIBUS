@@ -39,25 +39,30 @@ namespace Opibus.Domain.Tests
             var contaDeposito = new Conta(clienteDeposito, 10.00);
             var deposito = new Deposito(valorDepositado, contaDeposito);
             _Conta.Depositar(deposito);
-            Assert.AreEqual(_Conta.Saldo, 10.00);
+            Assert.AreEqual(_Conta.Saldo, 20.00);
 
         }
 
         [Test]
         public void SacarDaConta()
         {
+            var valorSaque = 10.00;
+            _Conta.Sacar(valorSaque);
+            Assert.AreEqual(_Conta.Saldo, 10.00);
         }
 
-        //[Test]
-        //public void TransferirParaOtraConta()
-        //{
-        //    var cliente = new Cliente("Marcos Silva", "123.456.789-00");
-        //    var valor = 10.00;
-        //    var conta = new Conta(cliente, valor);
-        //    var deposito = new Deposito(valor, conta);
-        //    conta.Depositar(deposito);
-        //    Assert.AreEqual(conta.Saldo, 10.00);
+        [Test]
+        public void TransferirParaOtraConta()
+        {
+            var cliente = new Cliente("Marcos Silva", "123.456.789-00");
+            var valor = 10.00;
+            var conta = new Conta(cliente, valor);
+            var deposito = new Deposito(valor, conta);
+            _Conta.Transferir(valor, conta);
+            Assert.AreEqual(_Conta.Saldo, 10.00);
+            //conta.Depositar(deposito);
+            //Assert.AreEqual(conta.Saldo, 10.00);
 
-        //}
+        }
     }
 }
