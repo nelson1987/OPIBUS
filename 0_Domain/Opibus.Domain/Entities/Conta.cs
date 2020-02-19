@@ -13,5 +13,10 @@ namespace Opibus.Domain.Entities
         public Cliente Cliente { get; private set; }
         public double Valor { get; private set; }
         public double Saldo { get { return Valor; } }
+
+        public void Depositar(Deposito deposito)
+        {
+            Valor += deposito.Valor;
+        }
     }
 }
