@@ -5,9 +5,13 @@ VisualStudioVersion = 15.0.28307.757
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0_Domain", "0_Domain", "{2CBD87C0-1E1D-463A-A0FE-27151D70F3FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opibus.Domain", "0_Domain\Opibus.Domain\Opibus.Domain.csproj", "{D289805F-E8B7-421B-AA2C-49E4A72F978F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opibus.Domain", "0_Domain\Opibus.Domain\Opibus.Domain.csproj", "{D289805F-E8B7-421B-AA2C-49E4A72F978F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opibus.Domain.Tests", "0_Domain\Opibus.Domain.Tests\Opibus.Domain.Tests.csproj", "{CBC331E4-3CC4-4F1A-8B0A-0C3D2474DF22}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1_Application", "1_Application", "{10C9F7C0-C386-4C0C-ACF2-2C10520C03E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opibus.Api", "1_Application\Opibus.Api\Opibus.Api.csproj", "{4EA909F6-95F9-42F7-9E77-EBE828282C32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +27,10 @@ Global
 		{CBC331E4-3CC4-4F1A-8B0A-0C3D2474DF22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBC331E4-3CC4-4F1A-8B0A-0C3D2474DF22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBC331E4-3CC4-4F1A-8B0A-0C3D2474DF22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EA909F6-95F9-42F7-9E77-EBE828282C32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EA909F6-95F9-42F7-9E77-EBE828282C32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EA909F6-95F9-42F7-9E77-EBE828282C32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EA909F6-95F9-42F7-9E77-EBE828282C32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{D289805F-E8B7-421B-AA2C-49E4A72F978F} = {2CBD87C0-1E1D-463A-A0FE-27151D70F3FD}
 		{CBC331E4-3CC4-4F1A-8B0A-0C3D2474DF22} = {2CBD87C0-1E1D-463A-A0FE-27151D70F3FD}
+		{4EA909F6-95F9-42F7-9E77-EBE828282C32} = {10C9F7C0-C386-4C0C-ACF2-2C10520C03E5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A9EF4BF-8C91-4283-8299-E12A9AB97F8F}
